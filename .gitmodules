@@ -1,3 +1,4 @@
 [submodule "wp-content"]
 	path = wp-content
 	url = git@github.com:AgoraFinancial/agorafinancial.git
+
