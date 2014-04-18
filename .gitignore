@@ -6,6 +6,7 @@
 *.swp
 .viminfo
 Thumbs.db
+.htaccess
 
 # wordpress specific
 wp-config.php
