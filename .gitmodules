@@ -1,0 +1,3 @@
+[submodule "dr-content"]
+	path = dr-content
+	url = git@github.com:AgoraFinancial/dailyreckoning.git
