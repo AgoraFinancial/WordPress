@@ -5,6 +5,7 @@
 *.bak
 *.swp
 .viminfo
+.gitmodules
 Thumbs.db
 
 # wordpress specific
