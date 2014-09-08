@@ -5498,7 +5498,6 @@ blog-deleted.php
 cf-active-plugins.php
 michael_pento.jpg
 wp-cache-config.php
-wp-includes
 Text
 .svn
 prop-base
@@ -11275,7 +11274,6 @@ style.css
 tag.php
 index.php
 index.php
-wp-includes
 Text
 Diff
 Engine
@@ -12736,7 +12734,6 @@ drh_pw_masthead.png
 index.php
 scrath.php
 wp-config.php
-wp-includes
 Text
 Diff
 Engine
@@ -23026,7 +23023,6 @@ advanced-cache.php
 index.php
 install.php
 object-cache.php
-wp-includes
 Text
 Diff
 Engine
@@ -24173,7 +24169,6 @@ index.html
 advanced-cache.php
 index.php
 object-cache.php
-wp-includes
 SimplePie
 Cache
 Base.php
