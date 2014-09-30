@@ -8,24 +8,19 @@
 .gitmodules
 Thumbs.db
 .htaccess
+*.sublime-project
+*.sublime-workspace
 
 # wordpress specific
 wp-config.php
 wp-content
-wp-content/uploads/
-wp-content/blogs.dir/
-wp-content/upgrade/*
-wp-content/backup-db/*
-wp-content/advanced-cache.php
-wp-content/wp-cache-config.php
-wp-content/cache/*
-wp-content/cache/supercache/*
 dr-content
 
 # wpengine specific
 .smushit-status
 .gitattributes
 _wpeprivate
+<<<<<<< HEAD
 wp-content/object-cache.php
 
 /wp-content/plugins/hello.php
@@ -31654,3 +31649,5 @@ kkerrCNBC_3.gif
 AgoraGraphicsLogo.gif
 TrckRecSCSR.gif
 >>>>>>> 5cfe20aa2323419457e1f485e9ab98d3fcaaec1a
+=======
+>>>>>>> 2fb02efe14683767393724d6d9b78ceae942c5f6
