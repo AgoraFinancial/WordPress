@@ -15,12 +15,12 @@ Thumbs.db
 wp-config.php
 wp-content
 dr-content
+wp-config-sample.php
 
 # wpengine specific
 .smushit-status
 .gitattributes
 _wpeprivate
-<<<<<<< HEAD
 wp-content/object-cache.php
 
 /wp-content/plugins/hello.php
