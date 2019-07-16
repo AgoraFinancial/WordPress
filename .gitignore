@@ -10,6 +10,7 @@ Thumbs.db
 .htaccess
 *.sublime-project
 *.sublime-workspace
+robots.txt
 
 # wordpress specific
 wp-config.php
