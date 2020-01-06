@@ -1,0 +1,46 @@
+.faq-popular-list,
+.faq-category-list {
+    @include breakpoint(medium) {
+        column-count: 2;
+    }
+    li {
+        line-height: 2.5;
+        a {
+            line-height: 1.2;
+            display: inline-block;
+        }
+    }
+}
+
+.faq__nav--header {
+    margin-bottom: .5rem;
+    font-weight: 700;
+}
+
+.faq__nav {
+    margin-bottom: 2rem;
+    @include breakpoint(medium up) {
+        li {
+            padding-right: 1rem;
+            width: 50%;
+            float: left;
+        }
+    }
+}
+
+.faq__anchor {
+    position: relative;
+    top: -2rem;
+    @include breakpoint(medium) {
+        .faq__anchor {
+            top: $pub-logo-height;
+        }
+    }
+}
+
+.helpful {
+    p,
+    p a {
+        margin-bottom: 0;
+    }
+}

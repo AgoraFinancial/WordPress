@@ -1,0 +1,165 @@
+.tabs-subnav {
+    .is-desktop {
+        display: none;
+        @include breakpoint(medium-large up) {
+            display: block;
+        }
+    }
+    .is-mobile {
+        display: block;
+        @include breakpoint(medium-large up) {
+            display: none;
+        }
+    }
+    margin-top: $paragraph-margin-bottom*2;
+    margin-bottom: -2rem;
+    position: relative;
+    z-index: 11;
+    @include breakpoint(medium down) {
+        height: $tab-nav-height;
+    }
+    @include breakpoint(medium up) {
+        margin-top: $paragraph-margin-bottom*3;
+        margin-bottom: -3rem;
+    }
+    @include breakpoint(large up) {
+        margin-bottom: -4rem;
+    }
+    .tabs {
+        background: none;
+        border: 0;
+        @include breakpoint(medium-large up) {
+            > li:nth-child(n+2) {
+                margin-left: rem-calc(6);
+            }
+        }
+        @include breakpoint(medium down) {
+            margin-right: -0.9375rem;
+            margin-left: -0.9375rem;
+            position: relative;
+            top: $tab-nav-height;
+            > li:nth-child(n+2) {
+                border-top: 1px dotted $nav-tab-background;
+            }
+        }
+        @include breakpoint(small only) {
+            margin-right: -0.625rem;
+            margin-left: -0.625rem;
+        }
+    }
+    .tabs-title {
+        font-weight: 500;
+        background-color: $medium-gray;
+        &.is-active,
+        a:hover,
+        a:focus {
+            background: $white;
+        }
+        &.hide {
+            display: none !important;
+        }
+        @include breakpoint(medium-large up) {
+            &.callout-nav:not(.is-active) {
+                background-color: $nav-tab-background;
+                a,
+                &:not(:hover) a {
+                    color: $nav-tab-color;
+                }
+                a:hover {
+                    color: $anchor-color-hover;
+                }
+            }
+            &:not(.is-active):not(:hover) a {
+                color: $black
+            }
+        }
+        > a {
+            font-size: .9rem;
+            padding: 1rem 1.125rem;
+        }
+        @include breakpoint(medium down) {
+            float: left;
+            width: 100%;
+            display: none;
+            background: lighten($nav-tab-background, 10%);
+            display: none;
+            a {
+                padding: 0;                
+                height: $tab-nav-height;
+                font-weight: bold;
+                font-size: 1rem;
+                line-height: $tab-nav-height;
+                color: $nav-tab-color;
+                display: block;
+            }
+            &:hover a {
+                background: lighten($nav-tab-background, 10%);
+            }
+            &.is-active {
+                display: block;
+                position: absolute;
+                top: -$tab-nav-height;
+                background: $nav-tab-background;
+                a {
+                    position: relative;
+                    z-index: 1;
+                    color: $nav-tab-color;
+                    background: $nav-tab-background;
+                    &:before {
+                        content: '';
+                        border-style: solid;
+                        border-width: 10px 6px 0 6px;
+                        border-color: #fff transparent transparent transparent;
+                        position: absolute;
+                        z-index: -1;
+                        top: 1.25rem;
+                        right: 1rem;
+                        transition: all .2s ease-in-out;
+                        cursor: pointer;
+                    }                    
+                }
+            }
+
+            &.open a:before {
+                transform: rotate(180deg);
+            }
+        }
+    }
+    .more-tab {
+        position: relative;
+        z-index: 11;
+        &.hide {
+            display: inherit !important;
+            visibility: hidden;
+        }
+        .tab-sub-menu {
+            display: none;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: $white;
+            list-style: none;
+            border: 1px solid $light-gray;
+            .tabs-title {
+                float: none;
+                background-color: $white;
+                display: none;
+                &.show {
+                    display: block !important;
+                }
+                &:nth-child(n+2){
+                    border-top: 1px solid $light-gray;
+                }
+                a {
+                    padding: 1.25rem 1.5rem;
+                    line-height: 1;
+                    display: block;
+                    white-space: nowrap;
+                    text-align: right;
+                }
+            }
+        }
+    }
+}

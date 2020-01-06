@@ -1,0 +1,29 @@
+.cfl-glossary {
+    margin-left: 0;
+    list-style: none;
+    @include breakpoint(medium) {
+        column-count: 2;
+        column-gap: $paragraph-margin-bottom * 2;
+    }
+    @include breakpoint(large) {
+        column-count: 3;
+    }
+    ul {
+        padding: 2px 6px;
+        margin-left: 0;
+        list-style: none;
+    }
+    > li {
+        margin-bottom: $paragraph-margin-bottom * 2;
+        width: 100%;
+        display: inline-block;
+        border: 1px solid $medium-gray;
+
+    }
+    .cfl-header {
+        padding: 2px 6px;
+        background-color: $medium-gray;
+        display: block;
+        font-weight: bold;
+    }
+}

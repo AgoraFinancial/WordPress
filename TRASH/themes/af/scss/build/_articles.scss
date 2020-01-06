@@ -1,0 +1,165 @@
+.article-single {
+    > h1 {
+        @include breakpoint(medium up) {
+            margin-bottom: $paragraph-margin-bottom*2;
+        }
+    }
+    .post-featured-image {
+        text-align: center;
+    }
+    .openx-wrapper {
+        margin: 1.5rem 0;
+    }
+}
+
+.post-featured-image {
+    margin-bottom: $paragraph-margin-bottom;
+    @include breakpoint(medium up) {
+        margin-bottom: $paragraph-margin-bottom*2;
+    }
+}
+
+.article-thumb.large {
+    width: 100%;
+}
+
+.paygate-wrapper {
+    padding: $paragraph-margin-bottom;
+    @include breakpoint(medium up) {
+        padding: $paragraph-margin-bottom*2;
+    }
+    .paygate-actions {
+        &:last-child {
+            margin-bottom: -$paragraph-margin-bottom;
+        }
+        a {
+            margin-bottom: $paragraph-margin-bottom;
+            &:not(:last-child) {
+                margin-right: $paragraph-margin-bottom;
+            }
+        }
+    }
+}
+
+.post-actions {
+     @include breakpoint(medium up) {
+        margin-bottom: $paragraph-margin-bottom*2;
+     }
+     @include breakpoint(small only) {
+        display: block;
+        font-size: 0;
+        .button {
+            font-size: .75rem;
+        }
+    }
+}
+
+.columns.aside {
+    position: relative;
+}
+
+.post-actions--free {
+    margin-bottom: $paragraph-margin-bottom !important;
+    position: static;
+    top: $top-nav-height + 1rem;
+    @include breakpoint(small only) {
+        position: static !important;
+    }
+    &.sticky {
+        position: fixed;
+    }
+    &.end-scroll {
+        position: absolute;
+        top: auto;
+        bottom: 0;
+    }
+    .button--circle {
+        margin-bottom: $paragraph-margin-bottom/2;
+        padding: 0;
+        width: 40px;
+        height: 40px;
+        line-height: 45px;
+        border-radius: 50%;
+        @include breakpoint(medium) {
+            width: 50px;
+            height: 50px;
+            font-size: 1.25em;        
+            line-height: 55px;
+            display: block;
+            float: right;
+            clear: right;
+        }
+        .icon-resize {
+            width: 1.3333rem;
+        }
+        &.button--twitter {
+            background-color: #08a0e9;
+            &:hover {
+                background-color: scale-color(#08a0e9, $lightness: -15%);
+            }
+        }
+        &.button--facebook {
+            background-color: #3b5998;
+            &:hover {
+                background-color: scale-color(#3b5998, $lightness: -15%);
+            }
+        }        
+    }
+}
+
+.afr-member .post-actions--free {
+    top: $top-nav-height + $toolbar-height + 1rem;
+}
+
+.pdf-view {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.related-article {
+    margin-top: $paragraph-margin-bottom*2;
+    padding: $paragraph-margin-bottom 0;
+    @include hero-background($light-gray);
+    @include breakpoint(medium) {
+        padding: $paragraph-margin-bottom*2 0;
+    }
+    .article-card {
+        background: $white;
+        box-shadow: $card-shadow;
+        .article-excerpt-wrapper {
+            padding: $paragraph-margin-bottom;
+            border: $card-border;
+            border-top: 0;
+            @include breakpoint(medium up) {
+                padding: $paragraph-margin-bottom*2;
+            }
+            > :first-child {
+                margin-top: 0;
+            }
+            > :last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .openx-section {
+        margin-bottom: 0;
+        @include breakpoint(small only) {
+            margin-top: $paragraph-margin-bottom;
+        }
+    }
+    > .row {
+        transition: all .6s ease-in-out;
+    }
+    &.hidden-content--slide {
+        overflow-x: hidden;
+        > .row {
+            transform: translateX(-100%);
+            opacity: 0;            
+        }
+    }
+}

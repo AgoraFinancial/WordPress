@@ -1,0 +1,17 @@
+.side-nav {
+    .menu {
+        border: 1px solid $medium-gray;
+        a {
+            line-height: 1.2;
+        }
+        li {
+            .current_page_item,
+            &:hover {
+                background: $light-gray;
+            }
+            &:nth-child(n+2) {
+                border-top: 1px solid $medium-gray;
+            }
+        }
+    }
+}

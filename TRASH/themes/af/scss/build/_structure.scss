@@ -1,0 +1,79 @@
+body:not(#tinymce) {
+    padding-top: $header-height;
+    &.afr-member {
+        padding-top: $afr-header-height; 
+    }
+}
+
+.content-wrapper {
+    padding: $base-content-padding*2 0;
+    @include breakpoint(medium up) {
+        padding: $base-content-padding*3 0;
+    }
+    @include breakpoint(large up) {
+        padding: $base-content-padding*4 0;
+    }
+    .row:nth-of-type(n+2) {
+        margin-top: $paragraph-margin-bottom*2;
+    }
+}
+
+hr.custom-separator {
+    @extend hr;
+    max-width: 2rem;
+    border-bottom-width: 4px;
+    border-bottom-style: dotted;
+    @include breakpoint(medium up) {
+        margin: 2rem auto;
+    }
+}
+
+@include breakpoint(small) {
+    .layout-sidebar-right article,
+    .layout-sidebar-left aside {
+        margin-bottom: $paragraph-margin-bottom*2;
+    }
+}
+
+article,
+aside {
+    > :first-child {
+        margin-top: 0;
+    }
+    > :last-child {
+        margin-bottom: 0;
+    }
+}
+
+.clearfix {
+    @include clearfix;
+}
+
+table.table--unstyled {
+    width: auto;
+    border: 0;
+
+    tr {
+        background: none !important;
+
+        &:hover {
+            background: none !important;
+        }
+    }
+
+    td {
+        padding: 0 !important;
+        vertical-align: top;
+    }
+
+    thead {
+        border: 0;
+        background: none;
+        color: inhert;
+    }
+
+    tbody {
+        border: 0;
+        background: none;
+    }
+}

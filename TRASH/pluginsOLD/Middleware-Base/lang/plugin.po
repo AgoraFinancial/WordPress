@@ -1,0 +1,106 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Agora Middleware Plugin 1.0\n"
+"POT-Creation-Date: 2013-10-10 09:37-0500\n"
+"PO-Revision-Date: 2013-10-10 11:52-0500\n"
+"Last-Translator: \n"
+"Language-Team: Webcrue <cmcgrath@webcrue.com>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../plugin.php:72
+msgid "Base Settings"
+msgstr ""
+
+#: ../plugin.php:74
+msgid "Middleware Base Plugin Activated"
+msgstr ""
+
+#: ../plugin.php:100
+msgid "Agora Middleware 2.x Plugin Administration"
+msgstr ""
+
+#: ../plugin.php:101
+msgid "Middleware 2.x"
+msgstr ""
+
+#: ../classes/agora_view_framework.class.php:35
+msgid "Unable to Load Template "
+msgstr ""
+
+#: ../views/admin_base_form.php:1
+msgid "Global Settings"
+msgstr ""
+
+#: ../views/admin_base_form.php:9
+msgid "Portal Code (aka Auth Group)"
+msgstr ""
+
+#: ../views/admin_base_form.php:14
+msgid "A 3 character code that groups your pub codes"
+msgstr ""
+
+#: ../views/admin_base_form.php:19
+msgid "Connect to:"
+msgstr ""
+
+#: ../views/admin_base_form.php:25
+msgid "Production Environment"
+msgstr ""
+
+#: ../views/admin_base_form.php:30
+msgid "UAT Environment"
+msgstr ""
+
+#: ../views/admin_base_form.php:38
+msgid "Production Settings"
+msgstr ""
+
+#: ../views/admin_base_form.php:44
+msgid "Production Token"
+msgstr ""
+
+#: ../views/admin_base_form.php:49 ../views/admin_base_form.php:77
+msgid ""
+"A random text string needed to authenticate with middleware. Contact "
+"Publishing Services to obtain your token"
+msgstr ""
+
+#: ../views/admin_base_form.php:55
+msgid "Production URL"
+msgstr ""
+
+#: ../views/admin_base_form.php:60
+msgid "The URL for the Production middleware environment"
+msgstr ""
+
+#: ../views/admin_base_form.php:66
+msgid "UAT Settings"
+msgstr ""
+
+#: ../views/admin_base_form.php:72
+msgid "UAT Token"
+msgstr ""
+
+#: ../views/admin_base_form.php:83
+msgid "UAT URL"
+msgstr ""
+
+#: ../views/admin_base_form.php:88
+msgid "The URL for the UAT middleware environment"
+msgstr ""
+
+#: ../views/admin_base_form.php:93
+msgid "Save"
+msgstr ""
+
+#: ../views/admin_header.php:5
+msgid "Agora Middleware Settings"
+msgstr ""

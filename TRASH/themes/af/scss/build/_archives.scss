@@ -1,0 +1,53 @@
+.archive-nav {
+    .menu {
+        border-top: 0;
+    }
+    .archive-year-header {
+        margin-bottom: 0;
+        padding: 0.7rem 1rem;
+        font-size: 1.25rem;
+        line-height: 1.2;
+        text-align: center;
+        color: $black;
+        border: 1px solid $medium-gray;
+        border-bottom-width: 4px;
+        background: lighten($light-gray, 5%);
+        &:nth-child(n+2) {
+            border-top: 0;
+        } 
+        &:hover {
+            background: $light-gray;
+            cursor: pointer;
+        }
+        &.active {
+            background: $light-gray;
+        }
+    }
+    .archive-month-list {
+        display: none;
+        &.current-year {
+            display: block;
+        }
+    }
+}
+
+.blog,
+.archive.category {
+    .archive-link {
+        margin-bottom: 0;
+        &--footer {
+            float: none;
+            margin-top: $paragraph-margin-bottom;
+            text-align: center;
+            @include breakpoint(medium) {
+                margin-top: $paragraph-margin-bottom*2;
+            }
+        }
+    }
+}
+
+.archive-return {
+    svg {
+        margin-right: .5rem;
+    }
+}

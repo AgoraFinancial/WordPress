@@ -1,0 +1,88 @@
+html {
+    &.large {
+        font-size: 105%;
+    }
+    &.x-large {
+        font-size: 110%;
+    }
+    &.xx-large {
+        font-size: 120%;
+    }
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+    margin-bottom: $paragraph-margin-bottom;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3 {
+    line-height: 1.1;
+}
+
+.section-header {
+    padding-bottom: .5rem;
+    font-weight: 500;
+    border-bottom: 1px solid $medium-gray;
+    @include breakpoint(medium) {
+        margin-bottom: $paragraph-margin-bottom*2;
+    }
+}
+
+.small {
+    @extend small;
+}
+
+article,
+aside {
+    h2,
+    .h2 {
+        margin-top: $paragraph-margin-bottom*2;
+        @include breakpoint(medium) {
+            margin-top: $paragraph-margin-bottom*3;
+        }
+    }
+    h3,
+    .h3 {
+        margin-top: $paragraph-margin-bottom*1.5;
+        @include breakpoint(medium) {
+            margin-top: $paragraph-margin-bottom*2.25;
+        }
+    }
+    :first-child {
+        margin-top: 0;
+    }
+    :last-child {
+        margin-bottom: 0;
+    }
+}
+
+.centered {
+    text-align: center
+}
+
+.buy {
+    color: $success-color;
+}
+
+.sell {
+    color: $alert-color;
+}
+
+.hold {
+    color: $warning-color;
+}

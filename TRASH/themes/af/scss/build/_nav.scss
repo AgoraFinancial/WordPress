@@ -1,0 +1,218 @@
+.main-nav {
+    .menu {
+        width: 100%;
+        text-align: center;
+        background: darken($nav-main-sub-background, 10%);
+        white-space: nowrap;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 9998;        
+        display: none;
+        @include breakpoint(medium down) {
+            max-height: calc(100vh - #{$top-nav-height});
+            overflow: auto;
+        }
+        a {
+            padding: 1rem;
+            font-weight: bold;
+            line-height: 1;
+            color: $nav-main-sub-color;
+            position: relative;
+            z-index: 1;
+            display: block;
+        }
+        ul {
+            margin: 0;
+            list-style: none;
+            background: $nav-main-sub-background;
+            display: none;
+            a {
+                color: $nav-main-sub-color;
+            }
+            ul {
+                background: darken($nav-main-sub-background, 10%);
+            }
+        }
+        > li {
+            display: block;
+            &.user-welcome {
+                text-align: center;
+                &:hover {
+                    background: none;
+                }
+                span {
+                    font-weight: bold;
+                    color: $nav-main-sub-color;
+                    display: inline-block;
+                }
+                a:last-child {
+                    margin-left: 1rem;
+                    padding-left: 0;
+                    padding-right: 0;
+                    font-weight: normal;
+                    color: $nav-main-sub-color;
+                    display: inline-block;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+        li {
+            margin: 0;
+            float: none;
+            border-top: 1px dotted lighten($nav-main-sub-background, 20%);
+            position: relative;
+        }
+        .dropdown-toggle {
+            width: 50px;
+            height: 100%;
+            background: rgba(darken($nav-main-sub-background, 30%), .3);
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 11;
+            &:after {
+                content: '';
+                border-style: solid;
+                border-width: 10px 6px 0 6px;
+                border-color: #fff transparent transparent transparent;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                transition: all .2s ease-in-out;
+            }
+            &.active:after {
+                transform: rotate(180deg) translate(50%, 50%);
+            }
+            @include breakpoint(medium-large up){
+                display: none;
+            }
+        }
+        @include breakpoint(medium-large up) {
+            width: auto;
+            text-align: left;
+            background: $nav-main-background;
+            position: static;
+            display: block !important;
+            a {
+                color: $nav-main-color;
+            }
+            > li {
+                display: table-cell;
+                border-top: none;
+                &:hover {
+                    background: darken($nav-main-sub-background, 10%);
+                    a {
+                        color: $nav-main-sub-color;
+                    }
+                }
+                > a {
+                    padding: 0 1rem;
+                    line-height: $top-nav-height;
+                }
+                &.user-welcome {
+                    span {
+                        padding: 0 1rem;
+                        color: $nav-main-color;
+                    }
+                    a:last-child {
+                        margin-left: 0;
+                        font-weight: normal;
+                        font-size: .75rem;
+                        line-height: .5;
+                        color: $nav-main-color;
+                        display: block;
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+            li {
+                position: relative;
+                &:hover {
+                    background: darken($nav-main-sub-background, 10%);
+                    > ul {
+                        display: block !important;
+                    }
+                }
+            }
+            ul {
+                margin: 0;
+                max-height: calc(100vh - #{$top-nav-height});
+                overflow: auto;
+                list-style: none;
+                text-align: center;
+                white-space: nowrap;
+                background: darken($nav-main-sub-background, 10%);
+                position: absolute;
+                top: 100%;
+                right: 0;
+                display: none !important;
+                li:hover {
+                        background: $nav-main-sub-background;
+                }
+                ul {
+                    top: -1px;
+                    right: 100%;
+                    background: $nav-main-sub-background;
+                    li:hover {
+                        background: darken($nav-main-sub-background, 10%);
+                    }                    
+                }
+            }
+        }
+    }
+    @include breakpoint(medium-large up) {
+        height: $top-nav-height;
+    }
+    @include breakpoint(medium-large only) {
+        font-size: .875rem;
+    }
+}
+
+.nav-toggle {
+    height: $top-nav-height;
+    line-height: $top-nav-height;
+    @include breakpoint(medium-large up) {
+        display: none !important;
+    }
+    .button {
+        margin: 0;
+        padding: 0.325em .5em;
+        font-size: 1.5rem;
+        line-height: 0;
+        color: #fff;
+    }
+}
+
+.login-modal {
+    @include breakpoint(medium-large up) { 
+        padding: $paragraph-margin-bottom*2;
+    }
+}
+
+.afr-member .main-nav .menu {
+    @include breakpoint(medium down) {
+        max-height: calc(100vh - (#{$top-nav-height} + #{$toolbar-height}));
+        overflow: auto;
+    }
+}
+
+.nav-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: transparent;
+    z-index: 1;
+    display: none;
+
+    @include breakpoint(medium-large) {
+        display: none !important;
+    }
+}

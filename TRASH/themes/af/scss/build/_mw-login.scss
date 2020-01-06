@@ -1,0 +1,160 @@
+$form-font-size: .875rem;
+
+.tfs-mw-wrapper-block {
+    max-width: 30rem;
+    min-width: auto;
+    margin: 0 auto;
+    padding: 0;
+    background: none;
+
+    #tfs-mw-wrapper-block-title {
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: $primary-color;
+            @include breakpoint(medium) {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    .tfs-mw-wrapper-block-messages {
+        p {
+            margin: 0 0 1rem;
+        }
+    }
+
+    .tfs-mw-loginform .login-username,
+    .tfs-mw-loginform .login-password,
+    #password-reset-form .user-email,
+    #username-reset-form .user-email,
+    #password-change-form .user-email {
+        label {
+            width: auto;
+            font-family: $body-font-family;
+            font-weight: 700;
+            font-size: $form-font-size;
+            color: $dark-gray;
+        }
+        label.error {
+            margin-top: 0 !important;
+            font-size: $form-font-size !important;
+            color: $alert-color !important;
+        }
+        input {
+            margin-bottom: .5rem;
+            padding: .5rem;
+            height: 3rem;
+            font-family: $body-font-family;
+            font-weight: $global-weight-normal;
+            font-size: 1rem;
+            @include breakpoint(medium) {
+                margin-bottom: 1rem;
+            }
+            &.error {
+                border-color: $alert-color;
+                margin-bottom: .25rem;
+            }
+            &:focus {
+                border-color: $dark-gray;
+            }
+        }
+    }
+    .tfs-mw-loginform .login-username,
+    #password-change-form .user-email,
+    #password-change-form .new-password,
+    .tfs-mw-loginform .login-password,
+    #password-change-form .confirm-password {
+        margin-bottom: .5rem;
+        @include breakpoint(medium) {
+            margin-bottom: 1rem;
+        }
+    }
+    .mw-password-field-masking {
+        top: 1.5rem;
+        transform: translateY(-50%);
+    }
+    .tfs-mw-loginform .login-remember {
+        label {
+            input {
+                vertical-align: middle;
+                margin-right: .5rem;
+                position: static;
+                color: $dark-gray;
+            }
+        }
+    }
+    a,
+    a:visited {
+        font-size: $form-font-size;
+        color: $anchor-color;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    .mw-password-mask,
+    .mw-password-unmask {
+        background-position: center;
+    }
+    .tfs-mw-loginform .login-submit,
+    #password-reset-form .reset-submit,
+    #username-reset-form .reset-submit,
+    #password-change-form .new-password-submit {
+        margin: 1rem 0 0;
+        width: 100%;
+        text-align: center;        
+        input {
+            @include button(false, $primary-color, auto, $white);
+            margin-bottom: .5rem;
+            padding-right: 2rem;
+            padding-left: 2rem;
+            width: auto;
+            border-radius: 0;
+            border: 0;
+            text-transform: uppercase;           
+            font-size: 1.125rem;
+            font-weight: 500;
+            font-family: $body-font-family;
+            box-shadow: none;
+            @include breakpoint(medium) {
+                margin-bottom: 1rem;
+            }
+            &:hover,
+            &:focus {
+                box-shadow: none;
+                border-radius: 0;
+                border: 0;
+            }
+        }
+    }
+    .tfs-mw-wrapper-block-row {
+        @include breakpoint(medium down) {
+            text-align: center;
+            > * {
+                float: none;
+            }
+        }
+    }
+    .tfs-mw-wrapper-block-forgot-username {
+        margin-top: .5rem;
+        @include breakpoint(medium) {
+            margin-top: 1rem;
+        }
+    }
+    .tfs-mw-wrapper-block-success {
+        @include callout($success-color);
+        border-color: darken($success-color, 20%);
+        color: darken($success-color, 20%);
+    }
+    .tfs-mw-wrapper-block-error {
+        @include callout($alert-color);
+        border-color: $alert-color;
+        color: $alert-color;
+    }
+    .tfs-mw-wrapper-block-success,
+    .tfs-mw-wrapper-block-error {
+        padding: .625rem;
+        line-height: 1.2;
+    }
+}

@@ -1,0 +1,124 @@
+.alignnone,
+a img.alignnone
+.wp-caption.alignnone {
+    margin: 5px 1rem 1rem 0;
+}
+
+.aligncenter,
+div.aligncenter,
+a img.aligncenter {
+    margin: .25rem auto 1rem auto;
+    display: block;
+}
+
+.alignright,
+a img.alignright,
+.wp-caption.alignright {
+    float: right;
+    margin: .25rem 0 1rem 1rem;
+}
+
+.alignleft,
+a img.alignleft,
+.wp-caption.alignleft {
+    float: left;
+    margin: .25rem 1rem 1rem 0;
+}
+
+.wp-caption {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    max-width: 96%;
+    padding: .25rem 3px 10px;
+    text-align: center;
+}
+
+.wp-caption img {
+    border: 0 none;
+    height: auto;
+    margin: 0;
+    max-width: 98.5%;
+    padding: 0;
+    width: auto;
+}
+
+.wp-caption p.wp-caption-text,
+.wp-caption dd.wp-caption-text.gallery-caption {
+    font-size: 11px;
+    line-height: 1.2;
+    margin: 0;
+    padding: .25rem 0 0;
+}
+
+.screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
+.screen-reader-text:focus {
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    clip: auto !important;
+    color: #21759b;
+    display: block;
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: bold;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000;
+}
+
+img[style*='float']:first-child+h1,
+img[style*='float']:first-child+h2,
+img[style*='float']:first-child+h3,
+img[style*='float']:first-child+h4,
+img.alignleft:first-child+h1,
+img.alignleft:first-child+h2,
+img.alignleft:first-child+h3,
+img.alignleft:first-child+h4,
+img.alignright:first-child+h1,
+img.alignright:first-child+h2,
+img.alignright:first-child+h3,
+img.alignright:first-child+h4 {
+    margin-top: 0;
+}
+
+@include breakpoint(medium down) {
+    .alignnone,
+    .aligncenter,
+    .alignright,
+    .alignleft,
+    img.alignnone,
+    img.aligncenter,
+    img.alignright,
+    img.alignleft,
+    a img.alignnone,
+    a img.aligncenter,
+    a img.alignright,
+    a img.alignleft,
+    .wp-caption,
+    .wp-caption.alignnone,
+    .wp-caption.alignleft,
+    .wp-caption.alignright {
+        margin: 0 auto 1rem;
+        text-align: center;
+        float: none;
+        display: block;
+    }
+}
+
+@media screen and (min-width:783px) {
+    .admin-bar .site-header {
+        top: 32px;
+    }
+}

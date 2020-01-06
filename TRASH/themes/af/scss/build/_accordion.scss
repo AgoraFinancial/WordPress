@@ -1,0 +1,33 @@
+.accordion-section {
+    border: 1px solid $primary-color;
+    &:nth-child(n+2) {
+        margin-top: 1rem;
+    }
+    .accordion-header {
+        margin: 0;
+        padding: $paragraph-margin-bottom;
+        color: $black;
+        &:hover {
+            cursor: pointer;
+            color: $primary-color;
+            transition: all .2s ease-in-out;
+        }
+        @include breakpoint(medium) {
+            padding: $paragraph-margin-bottom*1.5;
+        }
+    }
+    .accordion-content {
+        border: 0;
+        padding: 0 $paragraph-margin-bottom $paragraph-margin-bottom;
+        display: none;
+        @include breakpoint(medium) {
+            padding: 0 $paragraph-margin-bottom*1.5 $paragraph-margin-bottom*1.5;
+        }
+        > :first-child {
+            margin-top: 0;
+        }
+        > :last-child {
+            margin-bottom: 0;
+        }
+    }
+}

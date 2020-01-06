@@ -1,0 +1,55 @@
+.table-subscriptions {
+    margin-top: $paragraph-margin-bottom*2;
+    thead th,
+    thead td,
+    tbody th,
+    tbody td,
+    tfoot th,
+    tfoot td {
+        padding: .825rem;
+        text-align: center;
+    }
+    .subscription-name {
+        font-style: italic;
+        font-weight: bold;
+        a {
+            font-weight: bold;
+        }
+    }
+    .renew-button {
+        margin-bottom: 0;
+    }
+    .sub-noexp,
+    .sub-lifetime,
+    .sub-auto {
+        font-style: italic;
+        color: $dark-gray;
+    }
+}
+
+.form-account {
+    margin: $paragraph-margin-bottom*2 auto 0;
+    max-width: 42rem;
+    > .row:nth-of-type(n+2) {
+        margin-top: 0;
+    }
+    label {
+        font-weight: 700;
+        color: $dark-gray;
+        @include breakpoint(medium) {
+            padding-top: .5rem;
+            text-align: right;
+        }
+    }
+}
+
+.required {
+    margin-left: .5rem;
+    font-weight: 700;
+    font-size: 1.25rem;
+    line-height: 0;
+    color: $alert-color;    
+    vertical-align: baseline;
+    position: relative;
+    top: .25rem;
+}

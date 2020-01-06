@@ -1,0 +1,22 @@
+.choose-path-options {
+    @include breakpoint(medium) {
+        margin-bottom: -1.25rem !important;
+    }
+    .column-block:nth-of-type(n+2) {
+        @include breakpoint(small only) {
+            margin-top: $paragraph-margin-bottom;
+        }
+    }
+}
+
+.whats-new-form {    
+    @include breakpoint(medium) {
+        display: flex;
+        select:first-child {
+            margin-right: $paragraph-margin-bottom;
+        }
+        select:last-child {
+            margin-left: $paragraph-margin-bottom;
+        }
+    }
+}

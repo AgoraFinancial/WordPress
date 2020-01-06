@@ -1,0 +1,38 @@
+// DR legacy
+$light-yellow: #fccd6e;
+$column-gutter: rem-calc(30);
+
+.utility-head {
+    font-size: rem-calc(15);
+    text-transform: uppercase;
+    transform: skew(-10deg);
+    width: auto;
+    float: left;
+    padding: $paragraph-margin-bottom/2.5;
+    color: $black;
+    background: lighten($light-yellow, 15%);
+    letter-spacing: 0.05em;
+    @include breakpoint(medium up) {
+        font-size: rem-calc(15);
+    }
+    font-weight: bold;
+    margin-bottom: $paragraph-margin-bottom;
+    &.list {
+        font-size: rem-calc(16);
+        margin-bottom: 0;
+        padding: $column-gutter/4 0;
+    }
+    ~ h3 {
+        clear: both;
+        transition: all .2s ease-in-out;
+    }
+}
+
+.article-summary > a:hover h3.utility-head ~ h3 {
+    color: $primary-color;
+}
+
+.openx-section .excerpt u,
+.openx-card .excerpt u {
+    color: $primary-color;
+}

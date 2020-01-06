@@ -1,0 +1,63 @@
+.fstElement {
+    margin-bottom: 20px;
+}
+.fstQueryInput {
+    display: inline-block;
+    border: none;
+    outline: none;
+}
+.fstResults {
+    border: 1px solid #ABABAC;
+}
+.fstResultItem {
+    display: block;
+    padding: 2px 10px;
+    margin-top: 4px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.fstResultItem:hover {
+    color: #fff;
+    background-color: #0073aa;
+}
+.fstControls {
+    border: 1px solid #ababab;
+    padding: 3px;
+    overflow-y: auto;
+
+}
+.fstSelected {
+    display: none;
+}
+.fstChoiceItem {
+    display: inline-block;
+    font-size: 0.8em;
+    position: relative;
+    margin: 0 0.41667em 0.41667em 0;
+    padding: 0.33333em 0.33333em 0.33333em 1.5em;
+    float: left;
+    border-radius: 0.25em;
+    border: 1px solid #0073aa;
+    cursor: auto;
+    color: #fff;
+    background-color: #0073aa;
+}
+.fstChoiceRemove {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    cursor: pointer;
+    background: none;
+    font-size: 1em;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 1.28571em;
+    line-height: 1.28571em;
+    margin-top: -0.64286em;
+    text-align: center;
+    color: #fff;
+}
+.fstNoResults {
+    padding-left: 5px;
+}

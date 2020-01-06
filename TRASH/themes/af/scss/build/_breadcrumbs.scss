@@ -1,0 +1,22 @@
+.breadcrumbs-wrapper {
+    padding: $paragraph-margin-bottom/2 0;
+    @include breakpoint(medium up) {
+        padding: $paragraph-margin-bottom 0;
+    }
+    ~ .content-wrapper {
+        padding-top: 0 ;
+    }
+}
+
+.breadcrumbs {
+    margin-bottom: 0;
+    .icon-home {
+        margin-right: .25em;
+        font-size: 1.25em;
+        vertical-align: top;
+    }
+}
+
+.breadcrumbs li:not(:last-child):after {
+    color: $black;
+}

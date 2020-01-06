@@ -1,0 +1,214 @@
+.pub-featured-image {
+    margin-bottom: 2rem;
+}
+
+.pub-logo {
+    margin: 0 auto;
+    width: auto;
+    display: block;
+}
+
+.pub-cta {
+    .button {
+        margin-bottom: 0;
+        &:nth-child(n+2) {
+            margin-left: .25rem;
+        }
+        @include breakpoint(small only) {
+            font-size: .9rem;
+        }
+    }
+    
+}
+
+.portfolio-table-wrapper {
+    .tab-filters > a {
+        margin-bottom: 0;
+        padding: .75rem .625rem;
+        font-size: .9rem;
+        @include breakpoint(medium) {
+            padding: 1rem 1.25rem;
+        }
+        &.hidden-filter {
+            background: $dark-gray;
+            &:hover {
+                background: $medium-gray;
+            }
+        }
+        &:nth-child(n+2) {
+            margin-left: .5rem;
+        }
+    }
+}
+
+.portfolio-table {
+    tbody {
+        tr {
+            border-bottom: 1px solid $light-gray;
+            &:nth-child(2n) {
+                background: $white;
+                border-bottom: 1px solid $light-gray;
+            }
+            &.trade-group-header {
+                font-weight: 700;
+                color: $white;
+                background-color: $primary-color;
+            }
+        }
+    }
+    .percent-gain-direction {
+        font-weight: 700;
+        &.success {
+            color: darken($success-color, 20%);
+        }
+        &.alert {
+            color: $alert-color;
+        }        
+    }
+}
+
+.table-sortable {
+    th[sort-column] {
+        cursor: pointer;
+    }
+}
+
+.pubinfo-section {
+    @include pubinfo-background($light-gray);   
+    .pub-card {
+        padding: $paragraph-margin-bottom;
+        background: $white;
+        border: $card-border;
+        box-shadow: $card-shadow;
+        .pub-logo-link {
+            display: block;
+            text-align: center;
+        }
+        @include breakpoint(medium up) {
+            padding: $paragraph-margin-bottom*2;
+        }
+        > :first-child {
+            margin-top: 0;
+        }
+        > :last-child {
+            margin-bottom: 0;
+        }
+        .pub-logo-link {
+            img {
+                max-height: $pub-logo-height*.6;
+                margin-top: $paragraph-margin-bottom/2;
+            }
+            @include breakpoint(medium) {
+                height: $pub-logo-height;
+                position: relative;
+                display: block;
+                img,
+                span {
+                    margin-top: 0;
+                    max-height: $pub-logo-height;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+                img {
+                    margin-top: 0;
+                    max-height: $pub-logo-height;
+                }
+                span {
+                    width: 100%;
+                }
+            }
+        }
+        .pub-actions {
+            text-align: center;
+            .button {
+                margin-bottom: 0;
+                &:nth-child(n+2) {
+                    margin-left: .5rem;
+                }
+            }
+        }
+    }
+}
+
+.pub-excerpt-list {
+    margin-bottom: -1.25rem;
+}
+
+.pub-subscription-list {
+    margin-bottom: -1.25rem;
+    .section-header:nth-of-type(n+2) {
+        margin-top: $paragraph-margin-bottom;
+        @include breakpoint(medium) {
+            margin-top: $paragraph-margin-bottom*2;
+        }
+    }
+}
+
+.publication-editor {
+    margin-bottom: $paragraph-margin-bottom;
+    font-size: 0;
+    @include breakpoint(medium) {
+        margin-bottom: $paragraph-margin-bottom*1.5;
+    }
+    > * {
+        font-size: 1rem;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .editor-image {
+        .avatar {
+            width: 48px;
+            height: 48px;
+        }
+    }
+    .editor-name {
+        padding-left: $paragraph-margin-bottom;
+        width: calc(100% - 48px);
+        font-size: .8rem;
+        line-height: 1.2;
+        color: $dark-gray;
+        a {
+            display: block;
+        }
+    }
+}
+
+.step-content {
+    margin-bottom: $paragraph-margin-bottom;
+    padding: $paragraph-margin-bottom*2 0;
+    border-width: 1px 0;
+    border-style: solid;
+    border-color: $medium-gray;
+    > :last-child {
+        margin-bottom: 0;
+    }
+}
+
+.steps-progress {
+    line-height: 1.2;
+    color: $dark-gray;
+}
+
+.current-step,
+.current-month {
+    background: $light-gray;
+}
+
+.archive-return,
+.archive-link {
+    @include breakpoint(medium) {
+        text-align: right;
+    }
+    .icon {
+        font-size: 1.25em;
+        vertical-align: text-bottom;
+    }
+}
+
+.archive-link {
+    @include breakpoint(medium) {
+        float: right;
+    }
+}

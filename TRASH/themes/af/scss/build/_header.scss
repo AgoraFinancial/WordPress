@@ -1,0 +1,26 @@
+.site-header {
+    width: 100%;
+    background: $header-background;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    .header-wrap {
+        width: 100%;
+        display: table;
+        position: relative;
+    }
+    .header-wrap > * {
+        display: table-cell;
+        vertical-align: middle;
+    }
+}
+
+.site-logo {
+    padding-right: 1rem;
+    a {
+        font-size: 1.5rem;
+        line-height: 1;
+        color: $header-font-color;
+    }
+}

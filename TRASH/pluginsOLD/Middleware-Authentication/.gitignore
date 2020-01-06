@@ -1,0 +1,5 @@
+.idea
+.DS_store
+tests/selenium-server-standalone-2.40.0.jar
+tests/tests/_log
+/.project

@@ -1,0 +1,51 @@
+Array
+(
+    [eventtypeid] => API-TRIGGER-CIR-WEBCANCELALL
+    [pubcode] => DTC
+    [customernumber] => 000074663028
+    [subref] => 000039497703
+)
+Array
+(
+    [eventtypeid] => API-TRIGGER-CIR-WEBCANCELALL
+    [pubcode] => DTC
+    [customernumber] => 000074663028
+    [subref] => 000039497703
+)
+Array
+(
+    [id] => 311792
+    [username] => AGLENN
+    [advantage_id] => 000074663028
+    [advantage_email] => AGLENN@AGORAFINANCIAL.COM
+    [email] => AGLENN@AGORAFINANCIAL.COM
+    [af_user_token] => 4a9k0s84n7zsp3d1
+    [customer_last_pub_purchased] => 
+    [first_name] => Alison
+    [last_name] => Glenn
+    [nickname] => aglenn
+    [display_name] => Alison Glenn
+    [capabilities] => a:1:{s:6:"editor";b:1;}
+)
+Array
+(
+    [eventtypeid] => API-TRIGGER-CIR-WEBCANCELALL
+    [pubcode] => DTC
+    [customernumber] => 000074663028
+    [subref] => 000039497703
+)
+Array
+(
+    [id] => 311792
+    [username] => AGLENN
+    [advantage_id] => 000074663028
+    [advantage_email] => AGLENN@AGORAFINANCIAL.COM
+    [email] => AGLENN@AGORAFINANCIAL.COM
+    [af_user_token] => 4a9k0s84n7zsp3d1
+    [customer_last_pub_purchased] => 
+    [first_name] => Alison
+    [last_name] => Glenn
+    [nickname] => aglenn
+    [display_name] => Alison Glenn
+    [capabilities] => a:1:{s:6:"editor";b:1;}
+)

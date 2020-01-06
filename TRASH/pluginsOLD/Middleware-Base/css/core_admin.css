@@ -1,0 +1,75 @@
+.lv-table-heading {
+    background: #dedede;
+}
+
+.lv-table-heading h3 {
+    margin: 0;
+}
+
+textarea.large-text{
+	height: 250px;
+}
+
+.grid_half{
+    width: 50%;
+    margin-right: 0 5px;
+    float:	left;
+}
+
+.indicator {
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    float: left;
+    float: left;
+    margin: auto;
+    margin-right: 15px;
+    /* width and height can be anything, as long as they're equal */
+
+    background-image: -moz-radial-gradient(45px 45px 45deg, circle cover, Gold 0%, Orange 100%, red 95%);
+    background-image: -webkit-radial-gradient(45px 45px, circle cover, Gold, Orange);
+    background-image: radial-gradient(45px 45px 45deg, circle cover, Gold 0%, Orange 100%, red 95%);
+}
+
+.indicator.green{
+    background-image: -moz-radial-gradient(45px 45px 45deg, circle cover, green 0%, DarkGreen 100%, red 95%);
+    background-image: -webkit-radial-gradient(45px 45px, circle cover, green, DarkGreen);
+    background-image: radial-gradient(45px 45px 45deg, circle cover, green 0%, DarkGreen 100%, red 95%);
+}
+
+.indicator.red{
+    background-image: -moz-radial-gradient(45px 45px 45deg, circle cover, red 0%, red 100%, red 95%);
+    background-image: -webkit-radial-gradient(45px 45px, circle cover, red, red);
+    background-image: radial-gradient(45px 45px 45deg, circle cover, red 0%, red 100%, red 95%);
+}
+
+textarea#exported_settings_base, textarea#import_settings_base,
+textarea#exported_settings_mc, textarea#import_settings_mc,
+textarea#exported_language_variables, textarea#imported_language_variables {
+    width: 100%;
+    max-width: 100%;
+    height: 100px;
+}
+
+.message_import_base {
+    display: none;
+    margin-bottom: 10px;
+}
+
+.import_export_row_base {
+    padding-top: 20px;
+}
+
+.associate_feedback.error{
+    color: red;
+}
+.associate_feedback.success{
+    color: green;
+}
+
+#exportForm {
+    display: inline-block;
+}
+.forgot-password-container{
+    display: none;
+}

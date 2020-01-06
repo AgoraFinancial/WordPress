@@ -1,0 +1,134 @@
+@media print {
+    @page {
+        margin: 0.5cm !important;
+    }
+
+    header.site-header,
+    header.masthead-wrapper,
+    .breadcrumbs-wrapper,
+    .footer-links,
+    .openx-wrapper,
+    .columns.aside,
+    #disqus_thread,
+    .related-posts {
+        display: none;
+    }
+
+    .large-10,
+    .columns.article {
+        max-width: 100%;
+        display: block;
+        flex: auto;
+    }
+
+    .content-wrapper {
+        .row:nth-child(n+2) {
+            margin-top: 0;
+        }
+    }
+
+    *,
+    *::before,
+    *::after {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    body {
+        padding: .75cm !important;
+        font: 10pt/1.2 Arial, Helvetica, sans-serif !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    article {
+        p {
+            a[href]::after {
+                content: " (" attr(href) ")";
+            }
+
+            abbr[title]::after {
+                content: " (" attr(title) ")";
+            }
+
+            a[href^="#"]::after,
+            a[href^="javascript:"]:after {
+                content: "";
+            }
+        }
+        .article-meta,
+        .author-bio {
+            a[href]::after,
+            abbr[title]::after,
+            a[href^="#"]::after,
+            a[href^="javascript:"]:after {
+                content: '' !important;
+                display: none !important;
+            }
+        }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight: bold !important;
+        font-size: 18pt !important;
+    }
+
+    h2 {
+        font-size: 16pt !important;
+    }
+
+    h3 {
+        font-size: 14pt !important;
+    }
+
+    h4 {
+        font-size: 12pt !important;
+    }
+
+    h5,
+    h6 {
+        font-size: 10pt !important;
+    }
+
+    code {
+        font: 10pt Courier, monospace;
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+
+}

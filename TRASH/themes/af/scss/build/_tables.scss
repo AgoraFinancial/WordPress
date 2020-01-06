@@ -1,0 +1,44 @@
+table {
+    line-height: 1.2;
+    &.recommendations-table {
+        .label {
+            font-size: 1rem;
+            text-transform: uppercase;
+        }
+    }
+    tbody tr:hover {
+        background: $light-gray;
+    }
+}
+
+.table-centered th,
+.table-centered td {
+    text-align: center;
+}
+
+.table-responsive {
+    @include breakpoint(small only) {
+        thead tr th {
+            display: none;
+        }
+        tbody tr td {
+            text-align: left;
+            display: block;
+            font-size: .875rem;
+            &[data-label]:before {
+                content: attr(data-label)': ';
+                font-weight: bold;
+            }
+            &:first-child {
+                padding-bottom: 0;
+            }
+            &:last-child {
+                padding-top: 0;
+            }
+            &:not(:first-child):not(:last-child){
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+        }
+    }
+}

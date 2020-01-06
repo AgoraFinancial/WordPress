@@ -1,0 +1,274 @@
+.article-card {
+    .excerpt-title {
+        margin-top: 0;
+    }
+
+    .article-category-labels {
+        margin-bottom: $paragraph-margin-bottom/2;
+
+        >* {
+            margin-right: .25rem;
+            margin-bottom: .25rem;
+        }
+    }
+
+    .article-category {
+        a:nth-child(n+2) {
+            margin-left: $paragraph-margin-bottom/2;
+        }
+    }
+}
+
+.article-meta {
+    margin-bottom: $paragraph-margin-bottom;
+    font-size: 0;
+
+    >* {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    &-image {
+        padding-right: 1rem;
+        font-size: 1rem;
+
+        @include breakpoint(small only) {
+            display: none;
+        }
+    }
+
+    &-text {
+        width: calc(100% - calc(48px + 1rem));
+        font-size: .8rem;
+        line-height: 1.2;
+        color: $dark-gray;
+
+        @include breakpoint(small only) {
+            width: 100%;
+        }
+
+        .meta-post-author,
+        .meta-post-date {
+            display: block;
+        }
+
+        .meta-date {
+            padding-right: $paragraph-margin-bottom/2;
+            display: inline-block;
+            white-space: no-wrap;
+        }
+    }
+
+    &-labels {
+        display: none;
+
+        .label {
+            margin-top: .1625rem;
+        }
+
+        .label:not(:last-child) {
+            margin-right: $paragraph-margin-bottom/3;
+        }
+    }
+}
+
+// only display in certain instances
+.page-template-page-whats-new,
+.single-publications,
+.paid-article {
+    .article-meta-labels {
+        display: inline-block;
+    }
+}
+
+
+.free-article .article-single {
+    .article-meta {
+        &-text {
+            .meta-date {
+                padding-right: 0;
+            }
+        }
+    }
+
+    @include breakpoint(medium) {
+        .article-meta {
+            text-align: right;
+
+            &-image {
+                margin-bottom: $paragraph-margin-bottom;
+                padding-right: 0;
+                width: 100%;
+
+                img {
+                    width: 100%;
+                    max-width: 80px;
+                }
+            }
+
+            &-text {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.related-article {
+    .article-meta-image {
+        .avatar {
+            width: 48px;
+            height: 48px;
+        }
+    }
+}
+
+.saved-archive {
+    .button--remove {
+        margin-top: $paragraph-margin-bottom;
+
+        .icon {
+            font-size: 1.25em;
+            vertical-align: text-bottom;
+        }
+    }
+}
+
+.avatar {
+    border-radius: 50%;
+}
+
+.label.primary.label-link:hover {
+    cursor: pointer;
+    background: scale-color($primary-color, $lightness: -15%);
+}
+
+.label.secondary.label-link:hover {
+    cursor: pointer;
+    background: scale-color($secondary-color, $lightness: -15%);
+    text-decoration: none;
+}
+
+.excerpt-list {
+    >.row:nth-of-type(n+2) {
+        .article-card {
+            padding-top: $paragraph-margin-bottom*2;
+            border-top: 1px solid $light-gray;
+        }
+    }
+
+    .article-card {
+        display: flex;
+        align-items: center;
+
+        .article-image-wrapper {
+            display: none;
+
+            @include breakpoint(medium up) {
+                padding-right: 2rem;
+                width: $excerpt-thumbnail-width;
+                display: inline-block;
+            }
+        }
+
+        .article-excerpt-wrapper {
+            width: 100%;
+        }
+
+        .avatar {
+            width: 48px;
+            height: 48px;
+        }
+    }
+}
+
+.article-image-link {
+    display: block;
+    position: relative;
+    z-index: 1;
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 2;
+        background: $primary-color;
+        opacity: 0;
+        transition: $common-transition;
+    }
+
+    &:hover {
+        &:after {
+            opacity: .4;
+        }
+    }
+}
+
+.excerpt-recommendations {
+    .label {
+        margin-right: .25rem;
+        margin-bottom: .25rem;
+        span {
+            text-transform: capitalize;
+        }
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+.single-publications,
+.paid-article,
+.author-archive,
+.page-template-page-whats-new,
+.page-template-page-my-saved-articles,
+.ticker-display {
+    .excerpt-list {
+        .article-image-wrapper {
+            order: 2;
+
+            @include breakpoint(medium up) {
+                padding-right: 0;
+                padding-left: 2rem;
+            }
+        }
+
+        .article-meta-image {
+            display: none;
+        }
+
+        @include breakpoint(medium) {
+
+            .meta-post-author,
+            .meta-post-date {
+                display: inline-block;
+            }
+
+            .meta-post-author:after {
+                content: '|';
+                padding: 0 .25rem;
+            }
+        }
+    }
+}
+
+.paid-article {
+    .article-meta-image {
+        display: none;
+    }
+
+    @include breakpoint(medium) {
+
+        .meta-post-author,
+        .meta-post-date {
+            display: inline-block;
+        }
+
+        .meta-post-author:after {
+            content: '|';
+            padding: 0 .25rem;
+        }
+    }
+}

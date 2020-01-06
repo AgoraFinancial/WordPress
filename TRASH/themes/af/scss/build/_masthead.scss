@@ -1,0 +1,28 @@
+.masthead-wrapper {
+    padding: 2rem 0;
+    text-align: center;
+    @include masthead-background($dark-gray);
+    @include breakpoint(medium up) {
+        padding: 3rem 0;
+    }
+    @include breakpoint(large up) {
+        padding: 4rem 0;
+    }
+}
+
+.masthead {
+    > *:first-child {
+        margin-top: 0;
+    }
+    > *:last-child {
+        margin-bottom: 0;
+    }
+    .avatar {
+        margin-right: $paragraph-margin-bottom;
+        @include breakpoint(medium) {
+            margin-right: $paragraph-margin-bottom*2;
+            width: 100%;
+            max-width: 100px;
+        }
+    }
+}

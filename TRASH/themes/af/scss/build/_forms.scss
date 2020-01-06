@@ -1,0 +1,87 @@
+/* Firefox fix where dropdown arrow not appearing with default Foundation */
+select {
+    background-origin: border-box;
+    background-position: calc(100% - .875rem) center;
+}
+
+.button,
+.label {
+    font-weight: 500;
+}
+
+.gform_wrapper form {
+    max-width: 40rem;
+}
+
+.coreg-wrapper {
+    margin: $paragraph-margin-bottom*2 auto 0;
+    max-width: rem-calc(768);
+    background: $white;
+    box-shadow: $card-shadow;
+    @include breakpoint(medium) {
+        padding: $paragraph-margin-bottom*2;
+    }
+    .coreg-form-title {
+        margin-bottom: 1rem;
+        transform: skew(-10deg);
+        color: $secondary-color;
+        &.section-header {
+            border-color: $secondary-color;
+        }
+    }
+    .coreg-pub-title {
+        font-weight: 700;
+        display: inline-block;
+    }
+    .coreg-checkbox-input {
+        width: rem-calc(20);
+        height: rem-calc(20);
+    }
+    .coreg-submit-button {
+        margin: 0 auto;
+        display: block;
+        @include breakpoint(small only) {
+            width: 100%;
+            font-size: .9rem;
+        }
+    }
+}
+
+.eo-message {
+    margin: 1rem 0 0;
+    font-size: .9rem;
+    line-height: 1.2;
+    &.success {
+        color: darken($success-color, 20%);
+    }
+    &.warning {
+        color: darken($warning-color, 20%);
+    }
+    &.alert {
+        color: darken($alert-color, 20%);
+    }
+    a {
+        text-decoration: underline;
+        color: inherit;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+.input-error {
+    border-color: $alert-color;
+    &:not(#new_password) {
+        margin-bottom: 0;
+    }
+}
+
+.input-error-msg {
+    font-weight: 700;
+    font-size: 80%;
+    color: $alert-color;
+}
+
+#ajax-loading {
+    display: none;
+}
