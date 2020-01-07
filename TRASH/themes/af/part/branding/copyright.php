@@ -1,1 +1,0 @@
-<p class="copyright">&copy; <?php echo date('Y'); ?> <?php echo get_bloginfo(); ?>, a division of Agora Financial, LLC.</p>

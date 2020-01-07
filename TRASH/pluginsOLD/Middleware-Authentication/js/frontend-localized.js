@@ -1,1 +1,0 @@
-// Localizes frontend scripts, leave empty
