@@ -11,6 +11,8 @@ Thumbs.db
 *.sublime-project
 *.sublime-workspace
 robots.txt
+.user.ini
+google*.html
 
 # wordpress specific
 wp-config.php
@@ -18,6 +20,9 @@ wp-content
 dr-content
 wp-config-sample.php
 logs/
+wordfence-waf.php
+readme.html
+readme*.html
 
 # wpengine specific
 .smushit-status
