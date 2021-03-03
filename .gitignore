@@ -19,6 +19,7 @@ wp-config.php
 wp-content
 dr-content
 wp-config-sample.php
+wp-config.php.orig
 logs/
 wordfence-waf.php
 readme.html
