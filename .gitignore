@@ -20,6 +20,7 @@ wp-content
 dr-content
 wp-config-sample.php
 wp-config.php.orig
+wp-config.php.save
 logs/
 wordfence-waf.php
 readme.html
